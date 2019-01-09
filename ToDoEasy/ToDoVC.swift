@@ -16,6 +16,7 @@ class ToDoVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadItems()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
