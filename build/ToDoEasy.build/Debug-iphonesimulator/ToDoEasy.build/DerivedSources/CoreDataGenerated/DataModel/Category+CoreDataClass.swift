@@ -1,5 +1,5 @@
 //
-//  DataModel+CoreDataModel.swift
+//  Category+CoreDataClass.swift
 //  
 //
 //  Created by Aukmate  Chayapiwat on 9/1/2562 BE.
@@ -10,4 +10,7 @@
 import Foundation
 import CoreData
 
+@objc(Category)
+public class Category: NSManagedObject {
 
+}

@@ -201,6 +201,14 @@ SWIFT_CLASS("_TtC8ToDoEasy11AppDelegate")
 @class NSEntityDescription;
 @class NSManagedObjectContext;
 
+SWIFT_CLASS_NAMED("Category")
+@interface Category : NSManagedObject
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
 SWIFT_CLASS_NAMED("Item")
 @interface Item : NSManagedObject
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
@@ -234,6 +242,7 @@ SWIFT_CLASS("_TtC8ToDoEasy6ToDoVC")
 
 @interface ToDoVC (SWIFT_EXTENSION(ToDoEasy)) <UISearchBarDelegate>
 - (void)searchBarSearchButtonClicked:(UISearchBar * _Nonnull)searchBar;
+- (void)searchBar:(UISearchBar * _Nonnull)searchBar textDidChange:(NSString * _Nonnull)searchText;
 @end
 
 #if __has_attribute(external_source_symbol)

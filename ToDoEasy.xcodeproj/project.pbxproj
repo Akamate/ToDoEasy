@@ -37,6 +37,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6132E87621E641B000BA0983 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6161814021DAB1D8003F1FCD /* ToDoVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6132E87721E641E400BA0983 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6132E87321DE849B00BA0983 /* DataModel.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6132E87821E641F000BA0983 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6161814221DAB1D8003F1FCD /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6161813221DAB1D8003F1FCD = {
 			isa = PBXGroup;
 			children = (
@@ -57,9 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				6161813E21DAB1D8003F1FCD /* AppDelegate.swift */,
-				6132E87321DE849B00BA0983 /* DataModel.xcdatamodeld */,
-				6161814021DAB1D8003F1FCD /* ToDoVC.swift */,
-				6161814221DAB1D8003F1FCD /* Main.storyboard */,
+				6132E87721E641E400BA0983 /* Model */,
+				6132E87621E641B000BA0983 /* ViewController */,
+				6132E87821E641F000BA0983 /* View */,
 				6161814521DAB1DA003F1FCD /* Assets.xcassets */,
 				6161814721DAB1DA003F1FCD /* LaunchScreen.storyboard */,
 				6161814A21DAB1DA003F1FCD /* Info.plist */,
