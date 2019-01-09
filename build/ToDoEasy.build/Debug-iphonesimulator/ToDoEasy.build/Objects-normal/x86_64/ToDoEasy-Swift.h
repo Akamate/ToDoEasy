@@ -206,7 +206,41 @@ SWIFT_CLASS_NAMED("Category")
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class Item;
+@class NSSet;
 
+@interface Category (SWIFT_EXTENSION(ToDoEasy))
+- (void)addItemsObject:(Item * _Nonnull)value;
+- (void)removeItemsObject:(Item * _Nonnull)value;
+- (void)addItems:(NSSet * _Nonnull)values;
+- (void)removeItems:(NSSet * _Nonnull)values;
+@end
+
+
+@interface Category (SWIFT_EXTENSION(ToDoEasy))
+@property (nonatomic, copy) NSString * _Nullable name;
+@property (nonatomic, strong) NSSet * _Nullable items;
+@end
+
+@class UIBarButtonItem;
+@class UITableView;
+@class UITableViewCell;
+@class UIStoryboardSegue;
+@class NSBundle;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC8ToDoEasy15CategoryTableVC")
+@interface CategoryTableVC : UITableViewController
+- (void)viewDidLoad;
+- (IBAction)addButtonPressed:(UIBarButtonItem * _Nonnull)sender;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
 
 
 SWIFT_CLASS_NAMED("Item")
@@ -218,13 +252,9 @@ SWIFT_CLASS_NAMED("Item")
 @interface Item (SWIFT_EXTENSION(ToDoEasy))
 @property (nonatomic) BOOL done;
 @property (nonatomic, copy) NSString * _Nullable title;
+@property (nonatomic, strong) Category * _Nullable category;
 @end
 
-@class UITableView;
-@class UITableViewCell;
-@class UIBarButtonItem;
-@class NSBundle;
-@class NSCoder;
 
 SWIFT_CLASS("_TtC8ToDoEasy6ToDoVC")
 @interface ToDoVC : UITableViewController

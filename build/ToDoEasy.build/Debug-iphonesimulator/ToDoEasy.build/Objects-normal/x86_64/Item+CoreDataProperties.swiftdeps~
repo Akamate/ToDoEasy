@@ -6,11 +6,14 @@ provides-member:
 - ["8ToDoEasy4ItemC", "fetchRequest"]
 - ["8ToDoEasy4ItemC", "done"]
 - ["8ToDoEasy4ItemC", "title"]
+- ["8ToDoEasy4ItemC", "category"]
 provides-dynamic-lookup:
+- "category"
 - "done"
 - "title"
 depends-top-level:
 - "Bool"
+- "Category"
 - "Item"
 - "NSFetchRequest"
 - "String"
@@ -52,9 +55,11 @@ depends-member:
 - !private ["SH", "init"]
 - !private ["SH", "init"]
 - ["8ToDoEasy4ItemC", "Bool"]
+- ["8ToDoEasy4ItemC", "Category"]
 - ["8ToDoEasy4ItemC", "Item"]
 - ["8ToDoEasy4ItemC", "NSFetchRequest"]
 - ["8ToDoEasy4ItemC", "String"]
+- ["8ToDoEasy4ItemC", "category"]
 - ["8ToDoEasy4ItemC", "deinit"]
 - ["8ToDoEasy4ItemC", "done"]
 - ["8ToDoEasy4ItemC", "fetchRequest"]
@@ -68,16 +73,20 @@ depends-member:
 - !private ["So14NSFetchRequestC", "init"]
 - !private ["So20NSFetchRequestResultP", "NSFetchRequest"]
 - ["So15NSManagedObjectC", "Bool"]
+- ["So15NSManagedObjectC", "Category"]
 - ["So15NSManagedObjectC", "Item"]
 - ["So15NSManagedObjectC", "NSFetchRequest"]
 - ["So15NSManagedObjectC", "String"]
+- ["So15NSManagedObjectC", "category"]
 - ["So15NSManagedObjectC", "done"]
 - ["So15NSManagedObjectC", "fetchRequest"]
 - ["So15NSManagedObjectC", "title"]
 - ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "Category"]
 - ["So8NSObjectC", "Item"]
 - ["So8NSObjectC", "NSFetchRequest"]
 - ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "category"]
 - ["So8NSObjectC", "done"]
 - ["So8NSObjectC", "fetchRequest"]
 - !private ["So8NSObjectC", "init"]
@@ -182,4 +191,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "9b3845455d8759c2b0960f5e09f3d48b"
+interface-hash: "20f56b42ea41de9b76136812a9dbd38c"

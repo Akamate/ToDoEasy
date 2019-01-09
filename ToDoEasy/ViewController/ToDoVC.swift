@@ -11,11 +11,16 @@ import CoreData
 
 class ToDoVC: UITableViewController {
     var items = [Item]()
+    var selectedCategory : Category?{
+        didSet{
+            loadItems()
+        }
+    }
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadItems()
+        //loadItems()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,6 +45,7 @@ class ToDoVC: UITableViewController {
             let item = Item(context: self.context)
             item.title = textField.text!
             item.done = false
+            item.category = self.selectedCategory
             self.items.append(item)
             self.saveItems();
         }
@@ -59,7 +65,14 @@ class ToDoVC: UITableViewController {
         }
         self.tableView.reloadData()
     }
-    func loadItems(with request : NSFetchRequest<Item> = Item.fetchRequest()){
+    func loadItems(with request : NSFetchRequest<Item> = Item.fetchRequest(),predicate : NSPredicate? = nil){
+        let categorypredicate = NSPredicate(format: "category.name MATCHES %@", selectedCategory!.name!)
+        if let newPredicate = predicate {
+            request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [categorypredicate,newPredicate])
+        }
+        else{
+            request.predicate = categorypredicate
+        }
         do{
             items = try context.fetch(request)
         }
