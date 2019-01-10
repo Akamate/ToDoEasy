@@ -6,5 +6,5 @@ target 'ToDoEasy' do
   use_frameworks!
 
   # Pods for ToDoEasy
-
+  pod 'SwipeCellKit'
 end

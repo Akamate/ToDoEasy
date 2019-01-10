@@ -2,7 +2,7 @@
 //  Category+CoreDataClass.swift
 //  
 //
-//  Created by Aukmate  Chayapiwat on 9/1/2562 BE.
+//  Created by Aukmate  Chayapiwat on 10/1/2562 BE.
 //
 //  This file was automatically generated and should not be edited.
 //

@@ -1,10 +1,10 @@
 version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
 options: "fccbf364985fc9fa54069be521f35b85"
-build_time: [1547049615, 44327000]
+build_time: [1547049629, 479577000]
 inputs:
   "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/ToDoEasy/ViewController/ToDoVC.swift": [1547049614, 0]
   "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/ToDoEasy/AppDelegate.swift": [1546538593, 0]
-  "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/ToDoEasy/ViewController/CategoryTableVC.swift": !dirty [1547049614, 0]
+  "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/ToDoEasy/ViewController/CategoryTableVC.swift": [1547049629, 0]
   "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/build/ToDoEasy.build/Debug-iphonesimulator/ToDoEasy.build/DerivedSources/CoreDataGenerated/DataModel/Category+CoreDataClass.swift": [1547047183, 0]
   "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/build/ToDoEasy.build/Debug-iphonesimulator/ToDoEasy.build/DerivedSources/CoreDataGenerated/DataModel/Category+CoreDataProperties.swift": [1547047183, 0]
   "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/build/ToDoEasy.build/Debug-iphonesimulator/ToDoEasy.build/DerivedSources/CoreDataGenerated/DataModel/Item+CoreDataClass.swift": [1547047183, 0]

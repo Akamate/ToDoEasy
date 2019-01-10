@@ -6,13 +6,20 @@ provides-member:
 - ["8ToDoEasy8CategoryC", "fetchRequest"]
 - ["8ToDoEasy8CategoryC", "name"]
 - ["8ToDoEasy8CategoryC", "items"]
+- ["8ToDoEasy8CategoryC", "addToItems"]
+- ["8ToDoEasy8CategoryC", "removeFromItems"]
+- ["8ToDoEasy8CategoryC", "addToItems"]
+- ["8ToDoEasy8CategoryC", "removeFromItems"]
 provides-dynamic-lookup:
+- "addToItems"
 - "items"
 - "name"
+- "removeFromItems"
 depends-top-level:
 - "Category"
 - "Item"
 - "NSFetchRequest"
+- "NSSet"
 - "String"
 - !private "StringLiteralType"
 depends-member:
@@ -24,11 +31,14 @@ depends-member:
 - ["8ToDoEasy8CategoryC", "Category"]
 - ["8ToDoEasy8CategoryC", "Item"]
 - ["8ToDoEasy8CategoryC", "NSFetchRequest"]
+- ["8ToDoEasy8CategoryC", "NSSet"]
 - ["8ToDoEasy8CategoryC", "String"]
+- ["8ToDoEasy8CategoryC", "addToItems"]
 - ["8ToDoEasy8CategoryC", "deinit"]
 - ["8ToDoEasy8CategoryC", "fetchRequest"]
 - ["8ToDoEasy8CategoryC", "items"]
 - ["8ToDoEasy8CategoryC", "name"]
+- ["8ToDoEasy8CategoryC", "removeFromItems"]
 - !private ["Sl", "init"]
 - !private ["Sl", "init"]
 - !private ["SL", "init"]
@@ -70,18 +80,24 @@ depends-member:
 - ["So15NSManagedObjectC", "Category"]
 - ["So15NSManagedObjectC", "Item"]
 - ["So15NSManagedObjectC", "NSFetchRequest"]
+- ["So15NSManagedObjectC", "NSSet"]
 - ["So15NSManagedObjectC", "String"]
+- ["So15NSManagedObjectC", "addToItems"]
 - ["So15NSManagedObjectC", "fetchRequest"]
 - ["So15NSManagedObjectC", "items"]
 - ["So15NSManagedObjectC", "name"]
+- ["So15NSManagedObjectC", "removeFromItems"]
 - ["So8NSObjectC", "Category"]
 - ["So8NSObjectC", "Item"]
 - ["So8NSObjectC", "NSFetchRequest"]
+- ["So8NSObjectC", "NSSet"]
 - ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "addToItems"]
 - ["So8NSObjectC", "fetchRequest"]
 - !private ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "items"]
 - ["So8NSObjectC", "name"]
+- ["So8NSObjectC", "removeFromItems"]
 - !private ["So8NSObjectP", "NSFetchRequest"]
 - !private ["So8NSObjectP", "init"]
 - !private ["So24NSPersistentStoreRequestC", "init"]
@@ -182,4 +198,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "a6d698ab04f284a203341f4af102023d"
+interface-hash: "105096dc44be9fdc9b11ad6132989887"
