@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import CoreData
+import RealmSwift
 
 class CategoryTableVC : SwipeVC {
-    var categories = [Category]()
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let realm = try! Realm()
+    var categories : Results<Category>?
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 80.0
@@ -22,11 +22,9 @@ class CategoryTableVC : SwipeVC {
         var textField = UITextField()
         let alert = UIAlertController(title: "Add New Category", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Add Category", style: .default) { (action) in
-            let catagory = Category(context: self.context)
-            catagory.name = textField.text!
-            print(textField.text!)
-            self.categories.append(catagory)
-            self.saveCategories();
+              let category = Category()
+              category.name = textField.text!
+              self.saveCategories(category: category)
         }
         alert.addTextField { (alertTextField) in
             alertTextField.placeholder = "Create new Category"
@@ -40,12 +38,14 @@ class CategoryTableVC : SwipeVC {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return categories.count
+        return categories?.count ?? 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
-        cell.textLabel?.text = categories[indexPath.row].name
+        if let category = categories?[indexPath.row]{
+            cell.textLabel?.text = category.name
+        }
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -54,14 +54,16 @@ class CategoryTableVC : SwipeVC {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! ToDoVC
         if let indexPath = tableView.indexPathForSelectedRow{
-            print(1341124)
-            destinationVC.selectedCategory = categories[indexPath.row]
+            destinationVC.selectedCategory = categories?[indexPath.row]
         }
     }
     // MARK: - Data Manipulate
-    func saveCategories(){
+    func saveCategories(category : Category){
         do{
-            try context.save()
+            try realm.write {
+                realm.add(category)
+            }
+            
         }
         catch{
             print("Failed Saving Data \(error)")
@@ -69,19 +71,22 @@ class CategoryTableVC : SwipeVC {
         self.tableView.reloadData()
     }
     func loadCategories(){
-        let request : NSFetchRequest<Category> = Category.fetchRequest()
-        do{
-            categories = try context.fetch(request)
-        }
-        catch{
-            print("Failed Fetching Data \(error)")
-        }
+        categories = realm.objects(Category.self)
         self.tableView.reloadData()
     }
     //update model when deleted
     override func updateModel(at indexPath: IndexPath) {
-        context.delete(categories[indexPath.row])
-        categories.remove(at: indexPath.row)
+        if let category = categories?[indexPath.row]{
+            do{
+                try realm.write {
+                    realm.delete(category)
+                }
+            }
+            catch {
+                print(error)
+            }
+        }
+        tableView.reloadData()
     }
 }
 

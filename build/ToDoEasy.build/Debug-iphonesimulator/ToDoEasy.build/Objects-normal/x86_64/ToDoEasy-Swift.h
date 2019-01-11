@@ -163,8 +163,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # define SWIFT_DEPRECATED_OBJC(Msg) SWIFT_DEPRECATED_MSG(Msg)
 #endif
 #if __has_feature(modules)
-@import CoreData;
 @import Foundation;
+@import RealmSwift;
 @import UIKit;
 #endif
 
@@ -198,28 +198,16 @@ SWIFT_CLASS("_TtC8ToDoEasy11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSEntityDescription;
-@class NSManagedObjectContext;
+@class RLMRealm;
+@class RLMObjectSchema;
+@class RLMSchema;
 
-SWIFT_CLASS_NAMED("Category")
-@interface Category : NSManagedObject
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class Item;
-@class NSSet;
-
-@interface Category (SWIFT_EXTENSION(ToDoEasy))
-- (void)addItemsObject:(Item * _Nonnull)value;
-- (void)removeItemsObject:(Item * _Nonnull)value;
-- (void)addItems:(NSSet * _Nonnull)values;
-- (void)removeItems:(NSSet * _Nonnull)values;
-@end
-
-
-@interface Category (SWIFT_EXTENSION(ToDoEasy))
-@property (nonatomic, copy) NSString * _Nullable name;
-@property (nonatomic, strong) NSSet * _Nullable items;
+SWIFT_CLASS("_TtC8ToDoEasy8Category")
+@interface Category : RealmSwiftObject
+@property (nonatomic, copy) NSString * _Nonnull name;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithRealm:(RLMRealm * _Nonnull)realm schema:(RLMObjectSchema * _Nonnull)schema OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithValue:(id _Nonnull)value schema:(RLMSchema * _Nonnull)schema OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UITableView;
@@ -253,16 +241,13 @@ SWIFT_CLASS("_TtC8ToDoEasy15CategoryTableVC")
 @end
 
 
-SWIFT_CLASS_NAMED("Item")
-@interface Item : NSManagedObject
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface Item (SWIFT_EXTENSION(ToDoEasy))
+SWIFT_CLASS("_TtC8ToDoEasy4Item")
+@interface Item : RealmSwiftObject
+@property (nonatomic, copy) NSString * _Nonnull title;
 @property (nonatomic) BOOL done;
-@property (nonatomic, copy) NSString * _Nullable title;
-@property (nonatomic, strong) Category * _Nullable category;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithRealm:(RLMRealm * _Nonnull)realm schema:(RLMObjectSchema * _Nonnull)schema OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithValue:(id _Nonnull)value schema:(RLMSchema * _Nonnull)schema OBJC_DESIGNATED_INITIALIZER;
 @end
 
 

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		AoO8mL8LP4fzB+Iz4w7ChkBKrng=
+		7Na7y+coUlr8OER6pL3Z4x6auFQ=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -40,13 +40,29 @@
 		<data>
 		UnMYCBGAJP4cJxVSdOTP7gPPTk0=
 		</data>
-		<key>DataModel.momd/DataModel.mom</key>
+		<key>Frameworks/Realm.framework/Info.plist</key>
 		<data>
-		pXqZiM6Ocfyaf27tDWiZ/1cpAlA=
+		TzITr+ZMVhFvZCsUpic/IkDpqac=
 		</data>
-		<key>DataModel.momd/VersionInfo.plist</key>
+		<key>Frameworks/Realm.framework/Realm</key>
 		<data>
-		hBmwnN+mkXIGi6CeKxEjFeZebSU=
+		KhgQ9iD6+2azvqO4jjPiobxUqWM=
+		</data>
+		<key>Frameworks/Realm.framework/_CodeSignature/CodeResources</key>
+		<data>
+		XRIuHcrEk0/Pn0sZOGgL0wCZg+4=
+		</data>
+		<key>Frameworks/RealmSwift.framework/Info.plist</key>
+		<data>
+		tXGHebDvo5WYsYDm22XQ/PkHrOo=
+		</data>
+		<key>Frameworks/RealmSwift.framework/RealmSwift</key>
+		<data>
+		Lei0bl+fqAHn8ca1y0fJwGNNQUs=
+		</data>
+		<key>Frameworks/RealmSwift.framework/_CodeSignature/CodeResources</key>
+		<data>
+		SGq/g++U5sUY5G/MLny4Y1cQ1cc=
 		</data>
 		<key>Frameworks/SwipeCellKit.framework/Info.plist</key>
 		<data>
@@ -54,7 +70,7 @@
 		</data>
 		<key>Frameworks/SwipeCellKit.framework/SwipeCellKit</key>
 		<data>
-		vZ2xz0x0UbZ+4y+/cqrZtOqogSk=
+		UWqI6mzasWjuuyONhBlRxNBFFQU=
 		</data>
 		<key>Frameworks/SwipeCellKit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -135,7 +151,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RXm+d/NzkhgvuOiYHHw5whg3Oe/aNRoLRa9+gKQLvfk=
+			4+goOdCEBmCGyCPjo5OdIE0XxXi5npH3l3cS53lL9Sk=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -194,18 +210,46 @@
 			G9lwy44lJRTZB5ababjlS4weKHI/UALTYZT8lBMgGxA=
 			</data>
 		</dict>
-		<key>DataModel.momd/DataModel.mom</key>
+		<key>Frameworks/Realm.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			r6mISgj8c9m9MPa8u5NgBsA1C5lcadGB14s9YbbZcNs=
+			dvUyK67CtBayT09xwbfEvFuGBnDSBluuf9ij6e+1nKc=
 			</data>
 		</dict>
-		<key>DataModel.momd/VersionInfo.plist</key>
+		<key>Frameworks/Realm.framework/Realm</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yamP9EAeHmPNRttT9MrF9Hvv6lHAU8zvJWVTPP4lZII=
+			L8h1f32ZhrvGuqe8vTYGCtTzqxeUYsHHsMpbYz/BCl0=
+			</data>
+		</dict>
+		<key>Frameworks/Realm.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2DRHJsmZhwAT6ztd0Xor1LNR0VsoFup41fu3vlQxJAw=
+			</data>
+		</dict>
+		<key>Frameworks/RealmSwift.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			U+Kiq55zbPMUrajcSbGXdXy+Jy/bNTq7DkAt1ilURy4=
+			</data>
+		</dict>
+		<key>Frameworks/RealmSwift.framework/RealmSwift</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mqaEfZyXH9BavspVECMlwI0PeERc3rSGUUNuVTQsMnU=
+			</data>
+		</dict>
+		<key>Frameworks/RealmSwift.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			CY8gzDN7ia9yHj5ltojCOWhPu2PYPZaztb5aD1LSVNQ=
 			</data>
 		</dict>
 		<key>Frameworks/SwipeCellKit.framework/Info.plist</key>
@@ -219,7 +263,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8oKk9pDxrr3OqnjkzbyjEjY1VOuu957lHyeqVbLbBlM=
+			OengR/ZJrRuTkJP6IZeUhjfL1qEsdi6hIstee/Oz9xs=
 			</data>
 		</dict>
 		<key>Frameworks/SwipeCellKit.framework/_CodeSignature/CodeResources</key>
