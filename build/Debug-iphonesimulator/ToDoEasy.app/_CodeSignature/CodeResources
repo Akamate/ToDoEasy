@@ -4,9 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Assets.car</key>
+		<data>
+		AoO8mL8LP4fzB+Iz4w7ChkBKrng=
+		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		MrUk9lWxNfXlgrz/GVw7MBTGsbA=
+		OC79zoQRlS+xm1W7oyYBqHWcLVw=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -14,7 +18,7 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		VceF8m1+8ARtVrTBLIsusN3No4U=
+		uTho5qRp8NfvSZHw+q9UvnAN9ok=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
@@ -22,19 +26,19 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/Prs-HT-4lh-view-IO6-Ft-MmU.nib</key>
 		<data>
-		jKiCyQ6T3UxrwCSXwI7Lad7wDCs=
+		mWnSxOtB5Dp0peRgmDNscuGvQDg=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-sNA-yt-ISg.nib</key>
 		<data>
-		UZsDO+cV+oJQk9lMr7jGTq7/MII=
+		6dHGlLXSz7iBARhmfGAGyu59BYI=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UITableViewController-Prs-HT-4lh.nib</key>
 		<data>
-		iMaQ//dTUtqXzX1dMCysWupNQ0k=
+		tRVLWqKCjr42EiRIouVSVBiUEMk=
 		</data>
 		<key>Base.lproj/Main.storyboardc/X0z-vf-TzK-view-T1z-zk-v6i.nib</key>
 		<data>
-		FoWRlYuOMOKRk4zsDQUm47dqxXY=
+		UnMYCBGAJP4cJxVSdOTP7gPPTk0=
 		</data>
 		<key>DataModel.momd/DataModel.mom</key>
 		<data>
@@ -43,6 +47,18 @@
 		<key>DataModel.momd/VersionInfo.plist</key>
 		<data>
 		hBmwnN+mkXIGi6CeKxEjFeZebSU=
+		</data>
+		<key>Frameworks/SwipeCellKit.framework/Info.plist</key>
+		<data>
+		Yajj0V+yCuAO7hPPJfmKhrTp8BQ=
+		</data>
+		<key>Frameworks/SwipeCellKit.framework/SwipeCellKit</key>
+		<data>
+		vZ2xz0x0UbZ+4y+/cqrZtOqogSk=
+		</data>
+		<key>Frameworks/SwipeCellKit.framework/_CodeSignature/CodeResources</key>
+		<data>
+		WPiZNIFvO0ibbYRUl3WJ7IWac90=
 		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
@@ -115,11 +131,18 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RXm+d/NzkhgvuOiYHHw5whg3Oe/aNRoLRa9+gKQLvfk=
+			</data>
+		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/YqTiZt7XbuLzENkNBRWwN3tewYIbUamr8+C6+quu3s=
+			mSnPxutWs5ffBv8SVQBpj1U/I2jWCeCuypcOxn5A6t8=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -133,7 +156,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ld57M9fXCGd5iO+BKXkFuSsrjioFXN2iPS3TkFBLJqc=
+			QF0DEM8CUc9NsAUFeOuU+aAA2jX3rNSRCRWw+Ap5HQc=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
@@ -147,28 +170,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3Ee/i8fimtn62/qx6DYvGvNbVcJIrrxn8iL+dJ+8AtI=
+			RusfaJakWcTZWNat/oVMGpB3LELidY96iuXUgr/x6bU=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-sNA-yt-ISg.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ACPzUu1bAMSUXKxlRGFhGMWnOUoM1QSR8HW1FJuAQuA=
+			DbpIFo3DdqY+03/Agexr8vSt+BL7TSLAHMA2o2sTw3M=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UITableViewController-Prs-HT-4lh.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Jz7YymplKEYRe7MCdrXXr2cbiRjo+BPXsCds7R7isKk=
+			4G6YnTpp6vF0ksMB4EHY1OlCsFqiASO/9yBX2gvR+4U=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/X0z-vf-TzK-view-T1z-zk-v6i.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yVScsc/XHpnYprD6CLDogdk0MXj9hdwf8Nk+X01KnWo=
+			G9lwy44lJRTZB5ababjlS4weKHI/UALTYZT8lBMgGxA=
 			</data>
 		</dict>
 		<key>DataModel.momd/DataModel.mom</key>
@@ -183,6 +206,27 @@
 			<key>hash2</key>
 			<data>
 			yamP9EAeHmPNRttT9MrF9Hvv6lHAU8zvJWVTPP4lZII=
+			</data>
+		</dict>
+		<key>Frameworks/SwipeCellKit.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GHZj6hx6r3jLOr8S7ZoLMA0PRhwVGOVFMV6zfBnbQSg=
+			</data>
+		</dict>
+		<key>Frameworks/SwipeCellKit.framework/SwipeCellKit</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			8oKk9pDxrr3OqnjkzbyjEjY1VOuu957lHyeqVbLbBlM=
+			</data>
+		</dict>
+		<key>Frameworks/SwipeCellKit.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			uLi1b6bTT4oBQ+3xeAV8AOdA2LpNhiRBPRHywaReZTg=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftCore.dylib</key>

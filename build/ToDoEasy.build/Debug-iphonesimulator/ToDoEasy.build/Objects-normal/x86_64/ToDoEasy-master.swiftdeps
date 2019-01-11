@@ -1,12 +1,13 @@
 version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
-options: "d18b7d76fb4f68a5205c7edaeb9d3d3d"
-build_time: [1547098713, 401376000]
+options: "2af0c26e83ddc43c4bd690397ed53b41"
+build_time: [1547107496, 3255000]
 inputs:
-  "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/ToDoEasy/ViewController/ToDoVC.swift": [1547049614, 0]
+  "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/ToDoEasy/ViewController/SwipeVC.swift": [1547106464, 0]
+  "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/ToDoEasy/ViewController/ToDoVC.swift": [1547107381, 0]
   "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/ToDoEasy/AppDelegate.swift": [1546538593, 0]
-  "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/ToDoEasy/ViewController/CategoryTableVC.swift": [1547098482, 0]
-  "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/build/ToDoEasy.build/Debug-iphonesimulator/ToDoEasy.build/DerivedSources/CoreDataGenerated/DataModel/Category+CoreDataClass.swift": [1547098713, 0]
-  "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/build/ToDoEasy.build/Debug-iphonesimulator/ToDoEasy.build/DerivedSources/CoreDataGenerated/DataModel/Category+CoreDataProperties.swift": [1547098713, 0]
-  "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/build/ToDoEasy.build/Debug-iphonesimulator/ToDoEasy.build/DerivedSources/CoreDataGenerated/DataModel/Item+CoreDataClass.swift": [1547098713, 0]
-  "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/build/ToDoEasy.build/Debug-iphonesimulator/ToDoEasy.build/DerivedSources/CoreDataGenerated/DataModel/Item+CoreDataProperties.swift": [1547098713, 0]
-  "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/build/ToDoEasy.build/Debug-iphonesimulator/ToDoEasy.build/DerivedSources/CoreDataGenerated/DataModel/DataModel+CoreDataModel.swift": [1547098713, 0]
+  "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/ToDoEasy/ViewController/CategoryTableVC.swift": [1547107495, 0]
+  "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/build/ToDoEasy.build/Debug-iphonesimulator/ToDoEasy.build/DerivedSources/CoreDataGenerated/DataModel/Category+CoreDataClass.swift": [1547107382, 0]
+  "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/build/ToDoEasy.build/Debug-iphonesimulator/ToDoEasy.build/DerivedSources/CoreDataGenerated/DataModel/Category+CoreDataProperties.swift": [1547107382, 0]
+  "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/build/ToDoEasy.build/Debug-iphonesimulator/ToDoEasy.build/DerivedSources/CoreDataGenerated/DataModel/Item+CoreDataClass.swift": [1547107382, 0]
+  "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/build/ToDoEasy.build/Debug-iphonesimulator/ToDoEasy.build/DerivedSources/CoreDataGenerated/DataModel/Item+CoreDataProperties.swift": [1547107382, 0]
+  "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/build/ToDoEasy.build/Debug-iphonesimulator/ToDoEasy.build/DerivedSources/CoreDataGenerated/DataModel/DataModel+CoreDataModel.swift": [1547107382, 0]

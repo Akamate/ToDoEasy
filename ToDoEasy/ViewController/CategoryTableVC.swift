@@ -9,11 +9,12 @@
 import UIKit
 import CoreData
 
-class CategoryTableVC : UITableViewController {
+class CategoryTableVC : SwipeVC {
     var categories = [Category]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = 80.0
         loadCategories()
     }
 
@@ -43,18 +44,17 @@ class CategoryTableVC : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell"
-            , for: indexPath)
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         cell.textLabel?.text = categories[indexPath.row].name
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "gotoToDoList", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! ToDoVC
         if let indexPath = tableView.indexPathForSelectedRow{
+            print(1341124)
             destinationVC.selectedCategory = categories[indexPath.row]
         }
     }
@@ -77,6 +77,11 @@ class CategoryTableVC : UITableViewController {
             print("Failed Fetching Data \(error)")
         }
         self.tableView.reloadData()
+    }
+    //update model when deleted
+    override func updateModel(at indexPath: IndexPath) {
+        context.delete(categories[indexPath.row])
+        categories.remove(at: indexPath.row)
     }
 }
 

@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ToDoVC: UITableViewController {
+class ToDoVC: SwipeVC {
     var items = [Item]()
     var selectedCategory : Category?{
         didSet{
@@ -22,22 +22,24 @@ class ToDoVC: UITableViewController {
         super.viewDidLoad()
         //loadItems()
     }
-
+    
+    //Table View
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return items.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath)
-        let item = items[indexPath.row]
-        cell.textLabel?.text = item.title
-        cell.accessoryType = item.done ? .checkmark : .none
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
+        cell.textLabel?.text = items[indexPath.row].title
+        cell.accessoryType = items[indexPath.row].done ? .checkmark : .none
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         items[indexPath.row].done = !items[indexPath.row].done
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    //add Button
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         var textField = UITextField()
         let alert = UIAlertController(title: "Add New ToDo Item", message: "", preferredStyle: .alert)
@@ -56,6 +58,8 @@ class ToDoVC: UITableViewController {
         alert.addAction(action)
         present(alert,animated: true,completion: nil)
     }
+    
+    //Load and Save Data
     func saveItems(){
         do{
             try context.save()
@@ -66,6 +70,7 @@ class ToDoVC: UITableViewController {
         self.tableView.reloadData()
     }
     func loadItems(with request : NSFetchRequest<Item> = Item.fetchRequest(),predicate : NSPredicate? = nil){
+        print(123456)
         let categorypredicate = NSPredicate(format: "category.name MATCHES %@", selectedCategory!.name!)
         if let newPredicate = predicate {
             request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [categorypredicate,newPredicate])
@@ -81,6 +86,11 @@ class ToDoVC: UITableViewController {
         }
         tableView.reloadData()
     }
+    //update model when deleted
+    override func updateModel(at indexPath: IndexPath) {
+        context.delete(items[indexPath.row])
+        items.remove(at: indexPath.row)
+    }
 }
 
 extension ToDoVC : UISearchBarDelegate{
@@ -90,7 +100,7 @@ extension ToDoVC : UISearchBarDelegate{
         request.predicate = predicate
         let sorts = [NSSortDescriptor(key: "title", ascending: true)]
         request.sortDescriptors = sorts
-        loadItems(with: request)
+        loadItems(with: request,predicate: predicate)
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if(searchBar.text!.count == 0){
@@ -101,3 +111,8 @@ extension ToDoVC : UISearchBarDelegate{
         }
     }
 }
+
+
+    
+    
+

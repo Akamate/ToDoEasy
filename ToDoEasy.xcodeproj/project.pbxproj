@@ -14,6 +14,7 @@
 		6161814421DAB1D8003F1FCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6161814221DAB1D8003F1FCD /* Main.storyboard */; };
 		6161814621DAB1DA003F1FCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6161814521DAB1DA003F1FCD /* Assets.xcassets */; };
 		6161814921DAB1DA003F1FCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6161814721DAB1DA003F1FCD /* LaunchScreen.storyboard */; };
+		619BBC5621E72DBE0028A857 /* SwipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619BBC5521E72DBE0028A857 /* SwipeVC.swift */; };
 		ECEB34C98916F4E709F64FF1 /* Pods_ToDoEasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C95E95C4D5192AB4F2D563 /* Pods_ToDoEasy.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		6161814521DAB1DA003F1FCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6161814821DAB1DA003F1FCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6161814A21DAB1DA003F1FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		619BBC5521E72DBE0028A857 /* SwipeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeVC.swift; sourceTree = "<group>"; };
 		C4937A9EE7EB13B05DF2887D /* Pods-ToDoEasy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoEasy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToDoEasy/Pods-ToDoEasy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				6161814021DAB1D8003F1FCD /* ToDoVC.swift */,
+				619BBC5521E72DBE0028A857 /* SwipeVC.swift */,
 				6132E87921E644C600BA0983 /* CategoryTableVC.swift */,
 			);
 			path = ViewController;
@@ -238,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				619BBC5621E72DBE0028A857 /* SwipeVC.swift in Sources */,
 				6161814121DAB1D8003F1FCD /* ToDoVC.swift in Sources */,
 				6132E87521DE849B00BA0983 /* DataModel.xcdatamodeld in Sources */,
 				6161813F21DAB1D8003F1FCD /* AppDelegate.swift in Sources */,
