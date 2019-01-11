@@ -6,6 +6,8 @@ provides-nominal:
 provides-member:
 - ["8ToDoEasy4ItemC", ""]
 provides-dynamic-lookup:
+- "done"
+- "title"
 depends-top-level:
 - "Bool"
 - "BooleanLiteralType"
@@ -287,4 +289,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "47c97fc56b7a29c5e0f3ad6d982958f3"
+interface-hash: "9329b12c8d7fa3448dff0ca776d86d98"

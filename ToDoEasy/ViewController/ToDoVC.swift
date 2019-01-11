@@ -7,46 +7,39 @@
 //
 
 import UIKit
-import RealmSwift
 
 class ToDoVC: SwipeVC {
-    let realm = try! Realm()
-    var items : Results<Item>?
-    var selectedCategory : Category?{
-        didSet{
-            loadItems()
-        }
-    }
-//    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    lazy var toDoVM : ToDoVM = {
+        return ToDoVM()
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initVM()
     }
     
+    func initVM(){
+        toDoVM.reloadTableViewClosure = { [weak self] () in
+            self?.tableView.reloadData()
+        }
+        toDoVM.fetchData()
+    }
     //Table View
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return items?.count ?? 1
+        return toDoVM.numberOfCells
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
-        if let item = items?[indexPath.row]{
+        if let item = toDoVM.items?[indexPath.row]{
             cell.textLabel?.text = item.title
             cell.accessoryType = item.done ? .checkmark : .none
         }
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let item = items?[indexPath.row]{
-            do  {
-                try realm.write {
-                    item.done = !item.done
-                }
-            }
-            catch{
-                print(error)
-            }
-        }
+        toDoVM.toggleFinished(at : indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
@@ -55,20 +48,8 @@ class ToDoVC: SwipeVC {
         var textField = UITextField()
         let alert = UIAlertController(title: "Add New ToDo Item", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
-            if let currentCategory = self.selectedCategory{
-                do{
-                    try self.realm.write {
-                        let item = Item()
-                        item.title = textField.text!
-                        currentCategory.Items.append(item)
-                    }
-                    self.tableView.reloadData()
-                }
-                catch{
-                    print(error)
-                }
-                
-            }
+            self.toDoVM.addData(title: textField.text!)
+            self.tableView.reloadData()
         }
         alert.addTextField { (alertTextField) in
             alertTextField.placeholder = "Create new item"
@@ -78,45 +59,20 @@ class ToDoVC: SwipeVC {
         present(alert,animated: true,completion: nil)
     }
     
-    //Load and Save Data
-    func saveItems(item : Item){
-        do{
-            try realm.write {
-                realm.add(item)
-            }
-        }
-        catch{
-            print("Failed Saving Data \(error)")
-        }
-        self.tableView.reloadData()
-    }
-    func loadItems(){
-          items = selectedCategory?.Items.sorted(byKeyPath: "title", ascending: true)
-          tableView.reloadData()
-    }
     //update model when deleted
     override func updateModel(at indexPath: IndexPath) {
-        if let item = items?[indexPath.row]{
-            do{
-                try realm.write {
-                    realm.delete(item)
-                }
-            }
-            catch {
-                print(error)
-            }
-        }
+        toDoVM.deleteData(at: indexPath)
     }
 }
 
 extension ToDoVC : UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        items = items?.filter("title CONTAINS[cd] %@ ",searchBar.text!).sorted(byKeyPath: "title", ascending: true)
+       toDoVM.searchItem(text : searchBar.text!)
        tableView.reloadData()
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if(searchBar.text!.count == 0){
-            loadItems()
+            toDoVM.fetchData()
             DispatchQueue.main.async {
                 searchBar.resignFirstResponder()
             }

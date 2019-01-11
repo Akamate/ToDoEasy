@@ -7,24 +7,26 @@
 //
 
 import UIKit
-import RealmSwift
 
 class CategoryTableVC : SwipeVC {
-    let realm = try! Realm()
-    var categories : Results<Category>?
+    lazy var categoryTableVM : CategoryTableVM = {
+        return CategoryTableVM()
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 80.0
-        loadCategories()
+        initVM()
     }
 
+    func initVM(){
+        categoryTableVM.fetchData()
+    }
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         var textField = UITextField()
         let alert = UIAlertController(title: "Add New Category", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Add Category", style: .default) { (action) in
-              let category = Category()
-              category.name = textField.text!
-              self.saveCategories(category: category)
+            self.categoryTableVM.addCategories(name: textField.text!)
+            self.tableView.reloadData()
         }
         alert.addTextField { (alertTextField) in
             alertTextField.placeholder = "Create new Category"
@@ -38,12 +40,12 @@ class CategoryTableVC : SwipeVC {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return categories?.count ?? 1
+        return categoryTableVM.numberOfCells
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
-        if let category = categories?[indexPath.row]{
+        if let category = categoryTableVM.categories?[indexPath.row]{
             cell.textLabel?.text = category.name
         }
         return cell
@@ -54,38 +56,12 @@ class CategoryTableVC : SwipeVC {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! ToDoVC
         if let indexPath = tableView.indexPathForSelectedRow{
-            destinationVC.selectedCategory = categories?[indexPath.row]
+            destinationVC.toDoVM.selectedCategory = categoryTableVM.categories?[indexPath.row]
         }
-    }
-    // MARK: - Data Manipulate
-    func saveCategories(category : Category){
-        do{
-            try realm.write {
-                realm.add(category)
-            }
-            
-        }
-        catch{
-            print("Failed Saving Data \(error)")
-        }
-        self.tableView.reloadData()
-    }
-    func loadCategories(){
-        categories = realm.objects(Category.self)
-        self.tableView.reloadData()
     }
     //update model when deleted
     override func updateModel(at indexPath: IndexPath) {
-        if let category = categories?[indexPath.row]{
-            do{
-                try realm.write {
-                    realm.delete(category)
-                }
-            }
-            catch {
-                print(error)
-            }
-        }
+        categoryTableVM.deleteCategories(at: indexPath)
         tableView.reloadData()
     }
 }
