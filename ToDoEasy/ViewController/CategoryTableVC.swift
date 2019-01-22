@@ -62,7 +62,6 @@ class CategoryTableVC : SwipeVC {
     //update model when deleted
     override func updateModel(at indexPath: IndexPath) {
         categoryTableVM.deleteCategories(at: indexPath)
-        tableView.reloadData()
     }
 }
 

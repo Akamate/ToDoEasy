@@ -1,12 +1,12 @@
 version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
 options: "60d5fd4c0ec16f363beeddfae38f1606"
-build_time: [1547205407, 428856000]
+build_time: [1548132771, 625768000]
 inputs:
   "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/ToDoEasy/ViewController/SwipeVC.swift": [1547106464, 0]
-  "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/ToDoEasy/ViewModel/CategoryTableVM.swift": [1547205406, 0]
+  "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/ToDoEasy/ViewModel/CategoryTableVM.swift": [1548132564, 0]
   "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/ToDoEasy/Model/Item.swift": [1547200348, 0]
   "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/ToDoEasy/ViewController/ToDoVC.swift": [1547204294, 0]
   "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/ToDoEasy/AppDelegate.swift": [1547196999, 0]
-  "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/ToDoEasy/ViewController/CategoryTableVC.swift": [1547205067, 0]
+  "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/ToDoEasy/ViewController/CategoryTableVC.swift": [1548132771, 0]
   "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/ToDoEasy/ViewModel/ToDoVM.swift": [1547204106, 0]
   "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/ToDoEasy/Model/Category.swift": [1547200347, 0]
