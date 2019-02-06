@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
 options: "60d5fd4c0ec16f363beeddfae38f1606"
-build_time: [1548132771, 625768000]
+build_time: [1549354376, 76991000]
 inputs:
   "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/ToDoEasy/ViewController/SwipeVC.swift": [1547106464, 0]
   "/Users/akamatechayapiwat/Desktop/SwiftProject/ToDoEasy/ToDoEasy/ViewModel/CategoryTableVM.swift": [1548132564, 0]
